@@ -1,7 +1,7 @@
 package main;
 
 /**
- * Created by JL on 12/11/2016.
+ * Represents book discounts
  */
 public enum Discount {
     ONE_BOOK(0),

@@ -94,4 +94,14 @@ public class BasketTest {
         // 25% discount applied to 5 book series, no discount for 1 book
         assertEquals(38, basket.getTotalAfterDiscounts(), 0);
     }
+
+    // TODO: 5 book 2 series
+
+    // TODO: 5 book 3 series
+
+    // TODO: 5 book 4 series
+
+    // TODO: 5 book 5 series
+
+    // TODO: 2, 3, 4, 5 series and a book
 }

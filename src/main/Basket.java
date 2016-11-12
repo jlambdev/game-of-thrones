@@ -28,7 +28,7 @@ public class Basket {
 
     public double getTotalAfterDiscounts() {
         DiscountCalculator discApplier = new DiscountCalculator(this);
-        applyDiscount(discApplier.getDiscount());
+        applyDiscount(discApplier.getTotalDiscounts());
         return this.total;
     }
 

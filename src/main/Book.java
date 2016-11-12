@@ -5,6 +5,8 @@ package main;
  */
 public class Book {
 
+    public static double STANDARD_PRICE = 8.0;
+
     private String title;
     private double price;
 
@@ -13,7 +15,7 @@ public class Book {
             throw new IllegalArgumentException();
         }
         this.title = title;
-        this.price = 8.0;
+        this.price = STANDARD_PRICE;
     }
 
     private boolean isTitleInSeries(String title) {
@@ -41,5 +43,9 @@ public class Book {
     public int hashCode() {
         int result = 17;
         return 31 * result + this.title.hashCode();
+    }
+
+    public String toString() {
+        return this.title;
     }
 }
