@@ -95,13 +95,100 @@ public class BasketTest {
         assertEquals(38, basket.getTotalAfterDiscounts(), 0);
     }
 
-    // TODO: 5 book 2 series
+    @Test
+    public void testFiveBookSeriesAndTwoBookSeries() {
+        Basket basket = new Basket();
+        // 5 book series
+        basket.addItem(new Book("A Game Of Thrones"));
+        basket.addItem(new Book("A Clash Of Kings"));
+        basket.addItem(new Book("A Storm Of Swords"));
+        basket.addItem(new Book("A Feast For Crows"));
+        basket.addItem(new Book("A Dance With Dragons"));
+        // 2 book series
+        basket.addItem(new Book("A Storm Of Swords"));
+        basket.addItem(new Book("A Clash Of Kings"));
+        assertEquals(7, basket.getItems().size());
+        assertEquals(45.20, basket.getTotalAfterDiscounts(), 0);
+    }
 
-    // TODO: 5 book 3 series
+    @Test
+    public void testFiveBookSeriesAndThreeBookSeries() {
+        Basket basket = new Basket();
+        // 5 book series
+        basket.addItem(new Book("A Game Of Thrones"));
+        basket.addItem(new Book("A Clash Of Kings"));
+        basket.addItem(new Book("A Storm Of Swords"));
+        basket.addItem(new Book("A Feast For Crows"));
+        basket.addItem(new Book("A Dance With Dragons"));
+        // 3 book series
+        basket.addItem(new Book("A Game Of Thrones"));
+        basket.addItem(new Book("A Clash Of Kings"));
+        basket.addItem(new Book("A Storm Of Swords"));
+        assertEquals(8, basket.getItems().size());
+        assertEquals(51.60, basket.getTotalAfterDiscounts(), 0);
+    }
 
-    // TODO: 5 book 4 series
+    @Test
+    public void testFiveBookSeriesAndFourBookSeries() {
+        Basket basket = new Basket();
+        // 5 book series
+        basket.addItem(new Book("A Game Of Thrones"));
+        basket.addItem(new Book("A Clash Of Kings"));
+        basket.addItem(new Book("A Storm Of Swords"));
+        basket.addItem(new Book("A Feast For Crows"));
+        basket.addItem(new Book("A Dance With Dragons"));
+        // 4 book series
+        basket.addItem(new Book("A Game Of Thrones"));
+        basket.addItem(new Book("A Clash Of Kings"));
+        basket.addItem(new Book("A Storm Of Swords"));
+        basket.addItem(new Book("A Feast For Crows"));
+        assertEquals(9, basket.getItems().size());
+        assertEquals(55.60, basket.getTotalAfterDiscounts(), 0);
+    }
 
-    // TODO: 5 book 5 series
+    @Test
+    public void testFiveBookSeriesAndFiveBookSeries() {
+        Basket basket = new Basket();
+        // 5 book series
+        basket.addItem(new Book("A Game Of Thrones"));
+        basket.addItem(new Book("A Clash Of Kings"));
+        basket.addItem(new Book("A Storm Of Swords"));
+        basket.addItem(new Book("A Feast For Crows"));
+        basket.addItem(new Book("A Dance With Dragons"));
+        // 5 book series
+        basket.addItem(new Book("A Game Of Thrones"));
+        basket.addItem(new Book("A Clash Of Kings"));
+        basket.addItem(new Book("A Storm Of Swords"));
+        basket.addItem(new Book("A Feast For Crows"));
+        basket.addItem(new Book("A Dance With Dragons"));
+        assertEquals(10, basket.getItems().size());
+        assertEquals(60, basket.getTotalAfterDiscounts(), 0);
+    }
 
-    // TODO: 2, 3, 4, 5 series and a book
+    @Test
+    public void testEveryTypeOfBookDiscount() {
+        Basket basket = new Basket();
+        // 5 book series
+        basket.addItem(new Book("A Game Of Thrones"));
+        basket.addItem(new Book("A Clash Of Kings"));
+        basket.addItem(new Book("A Storm Of Swords"));
+        basket.addItem(new Book("A Feast For Crows"));
+        basket.addItem(new Book("A Dance With Dragons"));
+        // 4 book series
+        basket.addItem(new Book("A Game Of Thrones"));
+        basket.addItem(new Book("A Clash Of Kings"));
+        basket.addItem(new Book("A Storm Of Swords"));
+        basket.addItem(new Book("A Feast For Crows"));
+        // 3 book series
+        basket.addItem(new Book("A Game Of Thrones"));
+        basket.addItem(new Book("A Clash Of Kings"));
+        basket.addItem(new Book("A Storm Of Swords"));
+        // 2 book series
+        basket.addItem(new Book("A Game Of Thrones"));
+        basket.addItem(new Book("A Clash Of Kings"));
+        // 1 book
+        basket.addItem(new Book("A Game Of Thrones"));
+        assertEquals(15, basket.getItems().size());
+        assertEquals(100.40, basket.getTotalAfterDiscounts(), 0);
+    }
 }
