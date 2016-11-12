@@ -12,7 +12,7 @@ public enum Discount {
 
     private int percentage;
 
-    private Discount(int percentage) {
+    Discount(int percentage) {
         this.percentage = percentage;
     }
 

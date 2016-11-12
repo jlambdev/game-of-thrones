@@ -9,8 +9,18 @@ public class Book {
     private double price;
 
     public Book(String title) {
+        if (!isTitleInSeries(title)) {
+            throw new IllegalArgumentException();
+        }
         this.title = title;
         this.price = 8.0;
+    }
+
+    private boolean isTitleInSeries(String title) {
+        for (Series seriesBook : Series.values()) {
+            if (title.toLowerCase().equals(seriesBook.getTitle())) return true;
+        }
+        return false;
     }
 
     public String getTitle() {
