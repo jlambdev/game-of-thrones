@@ -1,0 +1,4 @@
+# Ignore IntelliJ and Java binary output
+/.idea
+/out
+GameOfThrones.iml
